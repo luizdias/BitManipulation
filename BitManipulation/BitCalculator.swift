@@ -14,17 +14,15 @@ class BitCalculator {
     }
     
     func flippedCount(_ a: Int, _ b: Int) -> Int {
-        // Display given number
-        print("\n Given number ( a : ", a ,", b : ", b ,") ", terminator: "");
-        var num: Int = (a ^ b);
-        var count: Int = 0;
+        var num: Int = (a ^ b)
+        var count: Int = 0
+        
         // Count number of active bits
-        while (num > 0)
-        {
-            count += 1;
-            num = num & (num - 1);
+        while (num > 0) {
+            count += 1
+            num = num & (num - 1)
         }
-        print("\n Output : ", (count), terminator: "");
+        print("\n Output : ", (count), terminator: "")
         return count
     }
 }
